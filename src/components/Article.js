@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-function Article({ title, date = "January 1, 1970", preview }) {
+const Article = ({ title, date = "January 1, 1970", preview }) => {
   return (
     <article>
       <h3>{title}</h3>
@@ -8,6 +8,6 @@ function Article({ title, date = "January 1, 1970", preview }) {
       <p>{preview}</p>
     </article>
   );
-}
+};
 
 export default Article;

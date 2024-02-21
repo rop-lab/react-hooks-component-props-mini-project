@@ -1,19 +1,35 @@
-import React from "react";
-import blogData from "../data/blog";
-import Header from "./Header";
-import About from "./About";
-import ArticleList from "./ArticleList";
+// App.js
+import React from 'react';
+import ArticleList from './ArticleList';
+import MainContent from './MainContent';  // Update the import path if needed
+import Header from './Header';
+import Sidebar from './Sidebar';
 
-console.log(blogData);
+const posts = [
+  {
+    id: 1,
+    title: "First Post",
+    content: "This is the content of the first post."
+  },
+  {
+    id: 2,
+    title: "Second Post",
+    content: "This is the content of the second post."
+  }
+];
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <Header name={blogData.name}/>
-      <About image={blogData.image} about={blogData.about}/>
-       <ArticleList  posts={blogData.posts}/>
+      <Header />
+      <div className="wrapper">
+        <Sidebar />
+        <MainContent>
+          <ArticleList posts={posts} />
+        </MainContent>
+      </div>
     </div>
   );
-}
+};
 
 export default App;

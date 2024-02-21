@@ -1,12 +1,15 @@
-import React from "react";
+import React from 'react';
 
-function About({ about, image = "https://via.placeholder.com/215" }) {
+// Placeholder image URL
+const placeholderImage = "https://via.placeholder.com/215";
+
+const About = ({ aboutText, imageSrc = placeholderImage }) => {
   return (
     <aside>
-      <img src={image} alt="blog logo" />
-      <p>{about}</p>
+      <img src={imageSrc} alt="blog logo" />
+      <p>{aboutText}</p>
     </aside>
   );
-}
+};
 
 export default About;

@@ -1,5 +1,6 @@
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
+import MainContent from './components/MainContent';
 import App from "../components/App";
 
 test("renders the correct child components", () => {
